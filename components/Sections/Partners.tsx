@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Section } from '../ui/Section';
 import { PARTNERS } from '../../constants';
 import { FadeIn } from '../ui/FadeIn';
@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Partners = () => {
   const scrollContainer = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainer.current) {
@@ -16,6 +17,27 @@ const Partners = () => {
       });
     }
   };
+
+  // Scroll automático
+  useEffect(() => {
+    const autoScroll = setInterval(() => {
+      if (!isPaused && scrollContainer.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.current;
+        
+        // Verifica se chegou ao final (com uma margem de erro pequena)
+        // Se scrollLeft + clientWidth for maior ou igual ao scrollWidth total
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          // Volta para o início suavemente
+          scrollContainer.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          // Rola para a direita
+          scrollContainer.current.scrollBy({ left: 220, behavior: 'smooth' });
+        }
+      }
+    }, 3000); // 3 segundos
+
+    return () => clearInterval(autoScroll);
+  }, [isPaused]);
 
   return (
     <Section id="parceiros" bg="accent">
@@ -28,7 +50,11 @@ const Partners = () => {
         </FadeIn>
       </div>
 
-      <div className="relative group max-w-6xl mx-auto px-4">
+      <div 
+        className="relative group max-w-6xl mx-auto px-4"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <button 
           onClick={() => scroll('left')}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 p-2 rounded-full text-white hover:bg-primary transition-all backdrop-blur-sm -ml-4 md:-ml-8 border border-gray-700 hidden md:block opacity-0 group-hover:opacity-100"
