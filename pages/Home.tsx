@@ -24,7 +24,7 @@ const ServicesPreview = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {SPECIALTIES.slice(0, 3).map((item, index) => (
-          <FadeIn key={index} delay={index * 0.1} className="bg-dark/50 p-6 rounded-lg border border-white/10 hover:border-primary transition-colors">
+          <FadeIn key={index} delay={index * 0.1} className="bg-dark/50 p-6 rounded-lg border border-white/10 hover:border-primary transition-colors flex flex-col items-center text-center">
             <div className="mb-4 text-primary">
               {item.icon && <item.icon className="w-10 h-10" />}
             </div>

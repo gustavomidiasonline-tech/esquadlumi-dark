@@ -126,21 +126,21 @@ export const TESTIMONIALS: Testimonial[] = [
     author: "Christianne Su",
     rating: 5,
     date: "1 ano atrás",
-    text: "Gostaria de expressar minha satisfação com o excelente atendimento da ESQUAD LUMI! Desde o primeiro contato, fui muito bem atendido pela equipe, que demonstrou profissionalismo e atenção aos detalhes.",
-    avatarUrl: null
+    text: "Gostaria de expressar minha satisfação com o excelente atendimento da ESQUAD LUMI! Desde o primeiro contato, fui muito bem atendido...",
+    avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
   },
   {
     author: "Simone Quaresma",
     rating: 5,
     date: "3 meses atrás",
-    text: "Boa noite! Gostaria de agradecer a empresa pelo excelência de seu trabalho em minha casa! Só tenho a agradecer a dedicação dos do primeiro contato até a finalização da obra parabéns a toda a equipe.",
-    avatarUrl: null
+    text: "Boa noite! Gostaria de agradecer a empresa pelo excelência de seu trabalho em minha casa! Só tenho a agradecer a dedicação dos do primeiro contato...",
+    avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
   },
   {
-    author: "ROSA",
+    author: "Rosa Maria",
     rating: 5,
     date: "3 meses atrás",
     text: "Estou muito satisfeita! Atendimento nota 1000 em todas as etapas. Recomendo! Olhem essas fotos! Cada serviço mais lindo que o outro!",
-    avatarUrl: null
+    avatarUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
   }
 ];

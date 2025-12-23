@@ -17,7 +17,7 @@ const Partners = () => {
 
       <div className="flex flex-wrap justify-center items-center gap-12">
         {PARTNERS.map((partner, idx) => (
-          <FadeIn key={idx} delay={idx * 0.1} className="block w-40 md:w-48 h-24 flex items-center justify-center p-4 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-all hover:border-primary">
+          <FadeIn key={idx} delay={idx * 0.1} className="block w-40 md:w-48 h-24 flex items-center justify-center p-4 bg-white border border-gray-200 rounded hover:shadow-lg hover:border-primary hover:scale-105 transition-all duration-300">
             <a 
               href={partner.url || '#'} 
               target={partner.url ? "_blank" : "_self"}
@@ -26,7 +26,7 @@ const Partners = () => {
               <img 
                 src={partner.logoUrl} 
                 alt={partner.name} 
-                className="max-w-full max-h-full object-contain filter grayscale brightness-200 contrast-0 hover:filter-none transition-all duration-500"
+                className="max-w-full max-h-full object-contain"
               />
             </a>
           </FadeIn>
